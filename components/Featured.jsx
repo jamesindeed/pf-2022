@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Featured() {
   return (
-    <section className='featured-section' data-scroll-section>
+    <section className='featured-section' id='intro' data-scroll-section>
       <div className='featured-row-layout'>
         <h6>1. Interior Design | Site</h6>
         <img

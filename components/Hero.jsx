@@ -7,9 +7,15 @@ const Hero = () => {
       data-scroll-section
     >
       <ul className='absolute sm:top-0 -top-28 font-[Syncopate] text-red-800 space-y-1'>
-        <li>Intro</li>
-        <li>About</li>
-        <li>Featured</li>
+        <li>
+          <a href='#intro'>Intro</a>
+        </li>
+        <li>
+          <a href='#about'>About</a>
+        </li>
+        <li>
+          <a href='#projects'>Projects</a>
+        </li>
       </ul>
       <h1
         id='header-text'
