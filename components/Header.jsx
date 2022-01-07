@@ -3,12 +3,12 @@ import React from 'react';
 const Header = () => {
   return (
     <div
-      className='flex justify-between py-[50px] px-4 text-2xl tracking-wide text-[#464646] font-semibold uppercase'
+      className='flex px-[5vw] font-[Syncopate] justify-between pt-8 pb-12 text-2xl tracking-wide text-gray-700 font-semibold uppercase'
       data-scroll-section
     >
       <div>menu</div>
 
-      <div>James Indeed</div>
+      <div className='text-3xl'>J|T</div>
 
       <div>blog</div>
     </div>
