@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <div
-      className='flex px-[5vw] font-[Syncopate] justify-between pt-8 pb-12 text-xl tracking-wide text-[#252422] font-semibold uppercase'
+      className='flex font-[Syncopate] justify-between pt-8 pb-12 text-xl tracking-wide text-[#252422] font-semibold uppercase'
       data-scroll-section
     >
       <div>menu</div>
