@@ -1,10 +1,12 @@
 import { Layout } from '../components';
-// * Style Imports
+// Style Imports
 import '../styles/globals.scss';
 import '../styles/customCursor.scss';
 import '../styles/featured.scss';
 import '../styles/gallery.scss';
-
+// Locomotive
+import 'locomotive-scroll/src/locomotive-scroll.scss';
+// Tailwin
 import 'tailwindcss/tailwind.css';
 
 function MyApp({ Component, pageProps }) {
