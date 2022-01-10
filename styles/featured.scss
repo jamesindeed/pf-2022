@@ -1,7 +1,7 @@
 .featured-section {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  padding: 100px 0px;
+  padding-bottom: 100px;
   align-items: center;
 
   @media (max-width: 481px) {
@@ -9,7 +9,12 @@
     grid-template-rows: 1fr;
   }
   img {
-    clip-path: inset(0% 0% 0% 0%);
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+    &.is-reveal {
+      clip-path: inset(0% 0% 0% 0%);
+    }
   }
 
   h6 {
