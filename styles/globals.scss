@@ -19,6 +19,7 @@ body {
   background-color: $color-1;
 }
 
+// Class for Preloader
 .absolute-class {
   position: fixed;
   top: 0;
@@ -29,6 +30,28 @@ body {
   z-index: 1;
 }
 
+// Class for Hero text annimation
+.header-text {
+  transform: translate(0, 500px);
+  .header-text-parent {
+    overflow: hidden;
+  }
+}
+
+// Class for About text animation
+.about-section {
+  p {
+    opacity: 0;
+
+    > div {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+    &.is-reveal {
+      opacity: 1;
+    }
+  }
+}
 // * CSS RESET
 
 html,
