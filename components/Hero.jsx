@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section
-      className='relative pb-[100px] left-0 font-semibold tracking-wide text-[#252422] uppercase top-32'
+      className='relative pb-[100px] pt-[50px] md:pt-0 left-0 font-semibold tracking-wide text-[#252422] uppercase top-32'
       data-scroll-section
     >
       <ul className='absolute sm:top-0 -top-28 font-[Syncopate] text-[#780000] space-y-1'>
