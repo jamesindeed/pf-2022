@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import useOnScreen from '../hooks/useOnScreen';
+import cn from 'classnames';
 
 const images = [
   {
@@ -35,8 +39,20 @@ function GalleryItem({
   updateActiveImage,
   index,
 }) {
+  const ref = useRef(null);
+  const onScreen = useOnScreen(ref, 0.5);
+
+  useEffect(() => {
+    if (onScreen) {
+      updateActiveImage(index);
+    }
+  }, [onScreen, index]);
+
   return (
-    <div className='gallery-item-wrapper'>
+    <div
+      className={cn('gallery-item-wrapper', { 'is-reveal': onScreen })}
+      ref={ref}
+    >
       <div></div>
       <div className='gallery-item'>
         <div className='gallery-item-info'>
@@ -54,8 +70,32 @@ function GalleryItem({
   );
 }
 
-const Gallery = () => {
+const Gallery = ({ src, index, columnOffset }) => {
   const [activeImage, setActiveImage] = useState(1);
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    // This does not seem to work without a settimeout
+    setTimeout(() => {
+      let sections = gsap.utils.toArray('.gallery-item-wrapper');
+
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          start: 'top top',
+          trigger: ref.current,
+          scroller: '#main-container',
+          pin: true,
+          scrub: 0.5,
+          snap: 1 / (sections.length - 1),
+          end: () => `+=${ref.current.offsetWidth}`,
+        },
+      });
+      // ScrollTrigger.refresh();
+    });
+  }, []);
 
   const handleUpdateActiveImage = (index) => {
     setActiveImage(index + 1);
@@ -63,7 +103,7 @@ const Gallery = () => {
 
   return (
     <section data-scroll-section id='projects' className='gallery-wrap'>
-      <div className='gallery'>
+      <div className='gallery' ref={ref}>
         <div className='gallery-counter'>
           <span>{activeImage}</span>
           <span className='divider' />
