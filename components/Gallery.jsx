@@ -76,7 +76,6 @@ const Gallery = ({ src, index, columnOffset }) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    // This does not seem to work without a settimeout
     setTimeout(() => {
       let sections = gsap.utils.toArray('.gallery-item-wrapper');
 
