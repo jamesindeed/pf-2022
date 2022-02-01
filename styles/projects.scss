@@ -1,0 +1,135 @@
+// Section
+
+.project-wrap {
+  height: 100%;
+  margin: 0px -5vw;
+  background-color: #070707;
+  padding: 100px 200px;
+
+  @media (max-width: 765px) {
+    padding: 100px 100px;
+  }
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Card
+
+.project-item-wrapper {
+  height: 70vh;
+  margin-bottom: 200px;
+  width: 70vw;
+
+  @media (max-width: 768px) {
+    height: 70vw;
+    width: 70vw;
+  }
+
+  @media (max-width: 481px) {
+    height: 70vw;
+    width: 70vw;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &.is-reveal {
+    .project-item-image {
+      transform: scale(1);
+      filter: grayscale(0%) sepia(0%) brightness(60%);
+    }
+  }
+}
+
+.project-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  will-change: transform;
+
+  .project-item-info {
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+    transform: translateX(-60px);
+    color: #dbd8d6;
+    color: white;
+
+    @media (max-width: 768px) {
+      transform: translateX(-30px);
+    }
+
+    .project-info-title {
+      line-height: 6vw;
+      font-family: 'Bai Jamjuree';
+      font-weight: 600;
+      font-size: 6vw;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .project-info-subtitle {
+      position: relative;
+      line-height: 6vw;
+      color: transparent;
+      font-family: 'Bodoni Moda';
+      font-weight: 400;
+      font-size: 6vw;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke: 2px #dbd8d6;
+    }
+
+    .project-info-category {
+      position: relative;
+      line-height: 24px;
+      font-family: 'Bai Jamjuree';
+      font-weight: 400;
+      font-size: 24px;
+      -webkit-font-smoothing: antialiased;
+      margin-top: 2vh;
+    }
+  }
+  .project-item-image {
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    transform: scale(0.7);
+    transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    filter: grayscale(100%) sepia(20%) brightness(80%);
+  }
+}
+
+// Project Counter
+
+.project-counter {
+  position: absolute;
+  top: 5%;
+  left: 70px;
+  z-index: 1;
+  mix-blend-mode: difference;
+  line-height: 16px;
+  color: #dbd8d6;
+  font-family: 'Bai Jamjuree';
+  font-weight: 600;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  flex-direction: column;
+  display: flex;
+
+  .divider {
+    content: '';
+    background-color: white;
+    height: 6.25vw;
+    margin: 10px 4px;
+    width: 1px;
+    display: inline-block;
+  }
+}
