@@ -4,6 +4,7 @@ import '../styles/globals.scss';
 import '../styles/customCursor.scss';
 import '../styles/featured.scss';
 import '../styles/gallery.scss';
+import '../styles/projects.scss';
 // Locomotive
 import 'locomotive-scroll/src/locomotive-scroll.scss';
 // Tailwin
