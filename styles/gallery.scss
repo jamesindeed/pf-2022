@@ -1,5 +1,5 @@
 .gallery-wrap {
-  background-color: #d53f41;
+  background-color: #0e0e0e;
   margin-left: -5vw;
   margin-right: -5vw;
   padding: 100px 0px;
@@ -7,7 +7,7 @@
 
 .gallery-counter {
   position: absolute;
-  // top: 10%;
+  top: 10%;
   left: 100px;
   z-index: 1;
   mix-blend-mode: difference;
@@ -34,9 +34,9 @@
 .gallery {
   height: 80vh;
   padding: 10vh 0;
-  width: 400%;
+  // width: 400%;
   display: flex;
-  flex-wrap: nowrap;
+  // flex-wrap: nowrap;
 
   .gallery-item {
     width: 100%;
