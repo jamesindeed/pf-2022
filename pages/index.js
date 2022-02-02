@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { Header, About, Featured, Footer, Gallery, Hero } from '../components';
 import useLocoScroll from '../hooks/useLocoScroll';
+import Projects from '../components/Projects';
 
 export default function Home() {
   const [preloader, setPreloader] = useState(true);
@@ -63,7 +64,8 @@ export default function Home() {
           <Hero />
           <Featured />
           <About />
-          <Gallery />
+          {/* <Gallery /> */}
+          <Projects />
           <Footer />
         </div>
       )}
