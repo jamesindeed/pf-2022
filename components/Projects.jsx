@@ -52,6 +52,7 @@ function ProjectItem({
     <div
       className={cn('project-item-wrapper', { 'is-reveal': onScreen })}
       ref={ref}
+      data-scroll
     >
       <div></div>
       <div className='project-item'>
@@ -80,12 +81,12 @@ const Projects = () => {
 
   return (
     <section data-scroll-section id='projects' className='project-wrap'>
+      <div className='project-counter'>
+        <span>{activeImage}</span>
+        <span className='divider' />
+        <span>{images.length}</span>
+      </div>{' '}
       <div className='project'>
-        <div className='project-counter'>
-          <span>{activeImage}</span>
-          <span className='divider' />
-          <span>{images.length}</span>
-        </div>
         {images.map((image, index) => (
           <ProjectItem
             key={image.src}
