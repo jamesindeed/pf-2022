@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import useOnScreen from '../hooks/useOnScreen';
 import cn from 'classnames';
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+// import { gsap } from 'gsap/dist/gsap';
+// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const images = [
   {
@@ -85,7 +85,7 @@ const Projects = () => {
         <span>{activeImage}</span>
         <span className='divider' />
         <span>{images.length}</span>
-      </div>{' '}
+      </div>
       <div className='project'>
         {images.map((image, index) => (
           <ProjectItem
