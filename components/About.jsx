@@ -40,9 +40,12 @@ const About = () => {
       <SectionHeader title='about' />
       <p
         ref={ref}
-        className={cn('text-[4.5rem] leading-[1.12] opacity-0', {
-          'is-reveal': reveal,
-        })}
+        className={cn(
+          'text-[2.5rem] sm:text-[4.5rem] leading-[1.12] opacity-0',
+          {
+            'is-reveal': reveal,
+          }
+        )}
         id='headline'
       >
         I am a software engineer with skills in both front end and back end
