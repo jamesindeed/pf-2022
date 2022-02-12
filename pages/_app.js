@@ -6,9 +6,10 @@ import '../styles/featured.scss';
 import '../styles/gallery.scss';
 import '../styles/projects.scss';
 import '../styles/loader.scss';
+import '../styles/mobileMessage.scss';
 // Locomotive
 import 'locomotive-scroll/src/locomotive-scroll.scss';
-// Tailwin
+// Tailwind
 import 'tailwindcss/tailwind.css';
 
 function MyApp({ Component, pageProps }) {
