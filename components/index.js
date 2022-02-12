@@ -8,3 +8,4 @@ export { default as Gallery } from './Gallery';
 export { default as Footer } from './Footer';
 export { default as Projects } from './Projects';
 export { default as Loader } from './Loader';
+export { default as MobileMessage } from './MobileMessage';
