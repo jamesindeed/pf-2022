@@ -17,6 +17,10 @@ body {
   font-family: 'Poppins', sans-serif;
   cursor: none;
   background-color: $color-1;
+
+  @media (min-width: 481px) {
+    overflow: none !important;
+  }
 }
 
 // Class for Preloader
