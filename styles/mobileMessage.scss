@@ -1,0 +1,20 @@
+.mobile-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f0ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 9997;
+
+  .mobile-message-text {
+    font-size: 6vw;
+    max-width: 75%;
+    font-family: Syncopate;
+    font-weight: 700;
+  }
+}
