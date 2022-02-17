@@ -8,9 +8,10 @@ import {
   Hero,
   Projects,
   Loader,
+  MobileMessage,
 } from '../components';
 import useLocoScroll from '../hooks/useLocoScroll';
-import { gsap, Power4, Circ } from 'gsap/dist/gsap';
+import { gsap, Power4 } from 'gsap/dist/gsap';
 
 export default function Home() {
   // const [preloader, setPreloader] = useState(true);
@@ -42,6 +43,7 @@ export default function Home() {
   // };
 
   const [loaded, setLoaded] = useState(false);
+  // Initialize Smooth Scroll
   useLocoScroll(loaded);
   let tl = gsap.timeline();
   let sectionContainer = useRef(null);
@@ -49,13 +51,14 @@ export default function Home() {
   useEffect(() => {
     if (loaded && sectionContainer) {
       tl.fromTo(
-        sectionContainer.current,
+        sectionContainer,
         { opacity: 0 },
-        { opacity: 1, ease: Power4.easeInOut, duration: 0.4 }
+        { opacity: 1, ease: Power4.easeInOut, duration: 0.8 }
       );
     }
   }, [tl, loaded, sectionContainer]);
 
+  // !
   // return (
   //   <>
   //     <Head>
@@ -99,20 +102,23 @@ export default function Home() {
   return (
     <>
       {loaded ? (
-        <div
-          className='px-[5vw]'
-          id='main-container'
-          ref={(el) => (sectionContainer = el)}
-          data-scroll-container
-        >
-          <Header />
-          <Hero />
-          <Featured />
-          <About />
-          {/* <Gallery /> */}
-          <Projects />
-          <Footer />
-        </div>
+        <>
+          <MobileMessage />
+          <div
+            className='px-[5vw] opacity-0'
+            id='main-container'
+            ref={(el) => (sectionContainer = el)}
+            data-scroll-container
+          >
+            <Header />
+            <Hero />
+            <Featured />
+            <About />
+            {/* <Gallery /> */}
+            <Projects />
+            <Footer />
+          </div>
+        </>
       ) : (
         <Loader setLoaded={setLoaded} />
       )}
